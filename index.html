@@ -822,6 +822,57 @@
     color:rgba(225,233,255,.50);
   }
 
+
+  /* ============ ACOMPANHAMENTO ============ */
+  .support{background:var(--black-soft); padding-block:clamp(70px,9vw,120px);}
+  .support__head{text-align:center; margin-bottom:40px;}
+  .support__head .section-title{margin:16px auto 0; font-size:clamp(1.9rem,4vw,2.8rem);}
+  .support__head .lede{margin:16px auto 0; text-align:center;}
+  .support-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    max-width:920px;
+    margin-inline:auto;
+  }
+  @media (min-width:720px){
+    .support-grid{grid-template-columns:1fr 1fr 1fr; gap:16px;}
+  }
+  .support-card{
+    border:1px solid var(--neon-border);
+    border-radius:12px;
+    background:rgba(0,0,0,.35);
+    padding:22px 20px;
+    box-shadow:0 14px 40px rgba(0,0,0,.25);
+  }
+  .support-card__icon{
+    font-size:18px;
+    color:var(--neon-blue-bright);
+    margin-bottom:12px;
+    letter-spacing:.08em;
+    font-weight:700;
+  }
+  .support-card__title{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .support-card__text{
+    font-size:14px;
+    line-height:1.6;
+    color:var(--text-secondary);
+  }
+  .support-note{
+    max-width:720px;
+    margin:28px auto 0;
+    text-align:center;
+    font-size:15px;
+    line-height:1.65;
+    color:var(--text-secondary);
+  }
+
   /* ============ GARANTIA ============ */
   .guarantee{background:var(--navy);}
   .guarantee__grid{
@@ -1385,7 +1436,7 @@
       </h2>
       <p class="mentor__lead reveal-fade">Hoje sou reconhecido no TikTok, Instagram e estou até em fotos no Pinterest por shape e presença.</p>
       <p class="reveal-fade" style="color:var(--text-secondary); max-width:520px; line-height:1.65; margin-top:18px; font-size:15px;">
-        Eu escolhi o Apollo como referência de shape e foquei no que importa: treino certo, dieta, hábitos e consistência. O APOLLO METHOD é o sistema que organizei a partir disso. Pele, rosto, shape, cabelo e mentalidade. Pra quem quer parar de improvisar e ficar sheipado de verdade.
+        Eu escolhi o Apollo como referência de shape e foquei no que importa: treino certo, dieta, hábitos e consistência. O APOLLO METHOD é o sistema que organizei a partir disso. Pele, rosto, shape, cabelo e mentalidade. Pra quem quer parar de improvisar e ficar sheipado de verdade. E não: você não fica sozinho depois de entrar. Tem contato direto comigo.
       </p>
       
       <div class="mentor__social reveal-fade">
@@ -1398,6 +1449,47 @@
           <span>TikTok</span>
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ACOMPANHAMENTO ============ -->
+<section class="support" id="acompanhamento">
+  <div class="wrap">
+    <div class="support__head">
+      <div class="eyebrow reveal-line">NÃO É CURSO ABANDONADO</div>
+      <h2 class="section-title reveal-line">Você não compra e fica sozinho.</h2>
+      <p class="lede reveal-fade">Acompanhamento real. Dúvida, trava, ajuste. Eu estou no processo com você.</p>
+    </div>
+
+    <div class="support-grid">
+      <article class="support-card reveal-fade">
+        <div class="support-card__icon">01</div>
+        <div class="support-card__title">Contato direto</div>
+        <p class="support-card__text">Canal pra falar comigo. Não é bot. Não é “abra um ticket e espere 12 dias”.</p>
+      </article>
+      <article class="support-card reveal-fade">
+        <div class="support-card__icon">02</div>
+        <div class="support-card__title">Perguntas e ajustes</div>
+        <p class="support-card__text">Travou na pele, no treino, na dieta ou no visual? Pergunta. A gente destravou e segue.</p>
+      </article>
+      <article class="support-card reveal-fade">
+        <div class="support-card__icon">03</div>
+        <div class="support-card__title">Acompanhamento</div>
+        <p class="support-card__text">O objetivo é resultado e relacionamento. Quem aplica tem suporte pra não sumir no meio do caminho.</p>
+      </article>
+    </div>
+
+    <p class="support-note reveal-fade">
+      A gente não montou o APOLLO METHOD pra vender e sumir. Montou pra quem entra evoluir e ficar. Por isso o contato existe.
+    </p>
+
+    <div class="section-cta reveal-fade">
+      <a href="https://pay.cakto.com.br/3aar5jn_1080574" class="premium-cta" target="_blank" rel="noopener">
+        <span class="premium-cta__label">QUERO ENTRAR COM SUPORTE</span>
+        <span class="premium-cta__icon" aria-hidden="true">↗</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1426,7 +1518,7 @@
       <h2 class="section-title reveal-line">Você tem <span>30 dias</span> pra testar no espelho.</h2>
 
       <div class="guarantee__text reveal-fade">
-        <p>Entra. Aplica. Olha o que muda na pele, no rosto e na forma como você se carrega.</p>
+        <p>Entra. Aplica. Tira dúvida comigo quando travar. Olha o que muda na pele, no shape e na forma como você se carrega.</p>
         <p>Se em 30 dias você seguir o método e não perceber evolução, pede o reembolso nos termos da garantia.</p>
         <p>O risco é nosso. Continuar se escondendo é escolha sua.</p>
       </div>
@@ -1619,6 +1711,10 @@
     {
       question: "Consigo aplicar o APOLLO METHOD mesmo tendo uma rotina corrida?",
       answer: "Sim. A proposta é integrar os aprendizados à sua rotina de forma progressiva. Você poderá assistir às aulas e aplicar as orientações de acordo com a sua disponibilidade, transformando determinados cuidados e práticas em hábitos consistentes ao longo do processo."
+    },
+    {
+      question: "Vou ter contato direto com você depois da compra?",
+      answer: "Sim. O APOLLO METHOD não é curso de comprar e sumir. Você tem canal de contato direto pra tirar dúvidas, pedir ajuste e não ficar perdido no meio do processo. A ideia é acompanhamento de verdade, porque a gente constrói resultado e relacionamento no longo prazo."
     },
     {
       question: "O método inclui treino, shape e dieta?",
