@@ -630,6 +630,7 @@
   .results__head .section-title{margin-inline:auto;}
   .results__head .lede{margin:16px auto 0; text-align:center;}
 
+  .results-note{margin:0;}
   .results-stack{
     display:flex; flex-direction:column; gap:16px;
     max-width:720px; margin-inline:auto;
@@ -689,9 +690,17 @@
   .result-pair .result-card{margin:0;}
   .result-pair .result-card__media{
     aspect-ratio:3/4;
+    overflow:hidden;
   }
   .result-pair .result-card__media img{
-    width:100%; height:100%; object-fit:cover;
+    width:100%; height:100%; object-fit:cover; object-position:center top;
+  }
+
+  .result-card__media--natural{
+    aspect-ratio:auto !important;
+  }
+  .result-card__media--natural img{
+    width:100%; height:auto !important; object-fit:contain !important;
   }
 
   .result-eyes{
@@ -699,9 +708,16 @@
     grid-template-columns:1fr 1fr;
     gap:10px;
   }
+  .result-eyes .result-card__media{
+    aspect-ratio:auto;
+  }
+  .result-eyes .result-card__media img{
+    width:100%; height:auto; object-fit:contain; display:block;
+  }
 
   @media (max-width:560px){
-    .results-stack{gap:12px; padding-inline:0;}
+    .results-note{margin:0;}
+  .results-stack{gap:12px; padding-inline:0;}
     .result-card{border-radius:10px;}
     .result-card__badge{top:10px; left:10px; font-size:9.5px; padding:5px 9px;}
     .result-pair{gap:8px;}
@@ -1178,29 +1194,85 @@
     <div class="results__head">
       <div class="eyebrow reveal-line">PROVA REAL</div>
       <h2 class="section-title reveal-line" style="font-size:clamp(2rem,4.2vw,3rem); margin-top:16px;">
-        Resultado de quem aplicou.<br>Incluindo quem criou o método.
+        Resultado de quem aplicou.
       </h2>
+      <p class="lede reveal-fade">Alunos e o próprio método em prática. Sem filtro.</p>
     </div>
 
     <div class="results-stack">
 
-      <!-- Par antes/depois rosto -->
+      <!-- Alunos: transformações compostas -->
+      <article class="result-card reveal-fade">
+        <div class="result-card__media result-card__media--natural">
+          <span class="result-card__badge">Antes → Depois</span>
+          <img src="src/img/antesedepois3.jpeg" alt="Antes e depois Apollo Method" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+        </div>
+      </article>
+
+      <article class="result-card reveal-fade">
+        <div class="result-card__media result-card__media--natural">
+          <span class="result-card__badge">Perfil</span>
+          <img src="src/img/antesedepois7.jpeg" alt="Antes e depois perfil" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+        </div>
+      </article>
+
+      <article class="result-card reveal-fade">
+        <div class="result-card__media result-card__media--natural">
+          <span class="result-card__badge">Cabelo + presença</span>
+          <img src="src/img/antesedepois2.jpeg" alt="Transformação cabelo" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+        </div>
+      </article>
+
+      <article class="result-card reveal-fade">
+        <div class="result-card__media result-card__media--natural">
+          <span class="result-card__badge">Antes → Depois</span>
+          <img src="src/img/antesedepois6.jpeg" alt="Transformação presença" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+        </div>
+      </article>
+
+      <article class="result-card reveal-fade">
+        <div class="result-card__media result-card__media--natural">
+          <span class="result-card__badge">Progressão</span>
+          <img src="src/img/antesedepois4.jpeg" alt="Progressão pele e definição" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+        </div>
+      </article>
+
+      <!-- Olhos -->
+      <div class="result-eyes">
+        <article class="result-card reveal-fade">
+          <div class="result-card__media">
+            <span class="result-card__badge">Olhos</span>
+            <img src="src/img/olhos1.jpeg" alt="Área dos olhos antes e depois" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+          </div>
+          <div class="result-card__bar">Área dos olhos</div>
+        </article>
+        <article class="result-card reveal-fade">
+          <div class="result-card__media">
+            <span class="result-card__badge">Olhos</span>
+            <img src="src/img/olhos2.jpeg" alt="Olhar antes e depois" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+          </div>
+          <div class="result-card__bar">Presença no olhar</div>
+        </article>
+      </div>
+
+      <!-- Pedro Meireless -->
+      <p class="results-note reveal-fade" style="text-align:center; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--neon-blue-soft); margin:8px 0 0;">Pedro Meireless · referência do método</p>
+
       <div class="result-pair reveal-fade">
         <article class="result-card">
           <div class="result-card__media">
             <span class="result-card__badge result-card__badge--soft">Antes</span>
-            <img src="src/img/antes1.jpeg" alt="Antes - Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+            <img src="src/img/antes1.jpeg" alt="Pedro Meireless antes" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
           </div>
         </article>
         <article class="result-card">
           <div class="result-card__media">
             <span class="result-card__badge">Depois</span>
-            <img src="src/img/depois1.jpeg" alt="Depois - Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+            <img src="src/img/depois1.jpeg" alt="Pedro Meireless depois" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
           </div>
         </article>
       </div>
 
-      <!-- Shape evolution -->
       <div class="result-pair reveal-fade">
         <article class="result-card">
           <div class="result-card__media">
@@ -1210,24 +1282,22 @@
         </article>
         <article class="result-card">
           <div class="result-card__media">
-            <span class="result-card__badge">Depois</span>
+            <span class="result-card__badge">Shape</span>
             <img src="src/img/depois2.jpeg" alt="Depois shape" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
           </div>
         </article>
       </div>
 
-      <!-- Shape forte -->
       <article class="result-card reveal-fade">
-        <div class="result-card__media">
+        <div class="result-card__media result-card__media--natural">
           <span class="result-card__badge">Shape</span>
-          <img src="src/img/shapehorizontal.jpeg" alt="Shape - Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+          <img src="src/img/shapehorizontal.jpeg" alt="Shape Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
         </div>
-        <div class="result-card__bar">Treino certo · hábitos · consistência</div>
+        <div class="result-card__bar">Treino · hábitos · consistência</div>
       </article>
 
       <article class="result-card reveal-fade">
-        <div class="result-card__media">
-          <span class="result-card__badge">Praia</span>
+        <div class="result-card__media result-card__media--natural">
           <img src="src/img/shapepraia.jpeg" alt="Resultado real" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
         </div>
       </article>
@@ -1235,23 +1305,15 @@
       <div class="result-pair reveal-fade">
         <article class="result-card">
           <div class="result-card__media">
-            <img src="src/img/shapecamisaombro.jpeg" alt="Presença e shape" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+            <img src="src/img/shapecamisaombro.jpeg" alt="Presença" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
           </div>
         </article>
         <article class="result-card">
           <div class="result-card__media">
-            <img src="src/img/rostoshapecarro.jpeg" alt="Rosto e presença" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
+            <img src="src/img/rostocomcamisa.jpeg" alt="Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
           </div>
         </article>
       </div>
-
-      <article class="result-card reveal-fade">
-        <div class="result-card__media">
-          <span class="result-card__badge">Presença</span>
-          <img src="src/img/rostocomcamisa.jpeg" alt="Pedro Meireless" loading="lazy" decoding="async" onerror="this.style.opacity=.3">
-        </div>
-        <div class="result-card__bar">Conhecido no TikTok e no Pinterest pelo resultado</div>
-      </article>
 
     </div>
 
@@ -1314,9 +1376,9 @@
       <h2 class="section-title reveal-line">
         Eu não nasci assim.<br>Eu construí.
       </h2>
-      <p class="mentor__lead reveal-fade">Pedro Meireless. Conhecido no TikTok e no Pinterest por shape, presença e resultado real.</p>
+      <p class="mentor__lead reveal-fade">Pedro Meireless. Conhecido no TikTok e no Pinterest por shape e presença.</p>
       <p class="reveal-fade" style="color:var(--text-secondary); max-width:520px; line-height:1.65; margin-top:18px; font-size:15px;">
-        Método, treino certo, alimentação e hábitos. O APOLLO METHOD é o sistema que eu usei e organizei pra quem quer parar de improvisar e construir a própria versão: pele, rosto, cabelo, estrutura e mentalidade.
+        Eu escolhi o Apollo como referência de shape e foquei no que importa: treino certo, alimentação, hábitos e consistência. O APOLLO METHOD é o sistema que organizei a partir disso. Pele, rosto, cabelo, estrutura e mentalidade. Pra quem quer parar de improvisar.
       </p>
       
       <div class="mentor__social reveal-fade">
@@ -1474,33 +1536,33 @@
   const testimonials = [
     {
       id: "01",
-      quote: "Comecei buscando melhorar minha aparência, mas percebi que o processo era muito maior. Quando você organiza cabelo, pele, estilo e presença dentro de uma mesma estratégia, tudo começa a conversar.",
-      author: "DEPOIMENTO PLACEHOLDER 01"
+      quote: "Eu só ficava salvando edit e não aplicava nada. Quando segui o método na ordem, pele e cabelo já mudaram a forma como eu me via. O resto veio junto.",
+      author: "ALUNO APOLLO"
     },
     {
       id: "02",
-      quote: "O que mais gostei foi parar de testar coisas aleatórias. Ter uma direção clara tornou muito mais fácil entender o que realmente fazia sentido melhorar na minha imagem.",
-      author: "DEPOIMENTO PLACEHOLDER 02"
+      quote: "Parecia que eu fazia muita coisa e não avançava. O que mudou foi ter sequência. Pare de improvisar e o espelho começa a responder.",
+      author: "ALUNO APOLLO"
     },
     {
       id: "03",
-      quote: "Eu achava que glow up era simplesmente ficar mais bonito. O método me fez enxergar proporção, estilo, apresentação e presença de uma forma completamente diferente.",
-      author: "DEPOIMENTO PLACEHOLDER 03"
+      quote: "Eu achava que glow up era só academia. Quando organizei rosto, cabelo e presença, as pessoas começaram a comentar sem eu postar nada.",
+      author: "ALUNO APOLLO"
     },
     {
       id: "04",
-      quote: "A maior mudança foi começar a olhar para minha imagem como um conjunto. Pequenos ajustes passaram a fazer muito mais sentido quando deixaram de ser feitos de forma isolada.",
-      author: "DEPOIMENTO PLACEHOLDER 04"
+      quote: "O método me tirou do ciclo de comprar produto aleatório. Menos coisa, mais consistência. Em semanas a diferença já era clara na foto.",
+      author: "ALUNO APOLLO"
     },
     {
       id: "05",
-      quote: "O diferencial para mim foi a estrutura. Em vez de consumir dezenas de conteúdos e continuar sem saber por onde começar, passei a enxergar uma sequência lógica de evolução.",
-      author: "DEPOIMENTO PLACEHOLDER 05"
+      quote: "O diferencial foi parar de consumir conteúdo solto. Pela primeira vez eu sabia o que fazer segunda, terça e no mês inteiro.",
+      author: "ALUNO APOLLO"
     },
     {
       id: "06",
-      quote: "Não queria copiar a estética de outra pessoa. Queria descobrir o que funcionava para mim. Essa mudança de perspectiva foi provavelmente a parte mais importante do processo.",
-      author: "DEPOIMENTO PLACEHOLDER 06"
+      quote: "Não queria virar cópia de ninguém. Queria extrair o máximo do que eu já tinha. Essa foi a parte que mais fez sentido.",
+      author: "ALUNO APOLLO"
     }
   ];
 
