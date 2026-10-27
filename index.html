@@ -4,20 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#050505">
-<title>APOLLO — Glow up masculino</title>
-<meta name="description" content="APOLLO GLOW UP: o sistema de glow up masculino. Pele, rosto, postura, shape, dieta, cabelo e mentalidade, na ordem certa e com acompanhamento. Por Fabio Koziel.">
+<title>APOLO — Glow up masculino</title>
+<meta name="description" content="APOLO GLOW UP: o sistema de glow up masculino. Pele, rosto, postura, shape, dieta, cabelo e mentalidade, na ordem certa e com acompanhamento. Por Fabio Koziel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--black:#050505;--soft:#0A0A0A;--deep:#0F0C00;--navy:#1A1500;--neon:#FFD700;--neon2:#FFEA00;--neon3:#FFE566;--white:#FFFDF5;--mut:rgba(255,245,200,.64);--bd:rgba(255,215,0,.18);--ease:cubic-bezier(.16,1,.3,1);--pad:clamp(20px,5vw,48px)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{font-family:Manrope,system-ui,sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html,body{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--black);color:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 .wrap{width:100%;max-width:1100px;margin-inline:auto;padding-inline:var(--pad)}
 section{padding-block:clamp(72px,11vw,130px);position:relative;z-index:1}
-main,header,footer,nav{position:relative;z-index:1}
 h2{font-weight:700;font-size:clamp(1.75rem,5.2vw,2.9rem);line-height:1.12;letter-spacing:-.035em;text-wrap:balance}
 h2 em{font-style:normal;color:var(--neon)}
 .k{font-size:13px;font-weight:600;color:var(--neon3);margin-bottom:14px;opacity:.9}
@@ -25,8 +24,6 @@ h2 em{font-style:normal;color:var(--neon)}
 .c{text-align:center}.c .sub{margin-inline:auto}
 .alt{background:rgba(15,12,0,.72)}
 .rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.rv.in{opacity:1;transform:none}
-
-/* fundo: raios + partículas */
 #fx{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 #fx .b{position:absolute;top:-10%;height:120%;width:22vw;min-width:150px;max-width:340px;opacity:0;transform-origin:50% 0;
  background:linear-gradient(90deg,transparent,rgba(255,215,0,.11),transparent);
@@ -38,15 +35,11 @@ h2 em{font-style:normal;color:var(--neon)}
 @keyframes beam{0%,100%{opacity:.15}50%{opacity:1}}
 #fx::before{content:"";position:absolute;left:50%;top:-30%;width:90vw;max-width:900px;aspect-ratio:1;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,215,0,.12),transparent 65%)}
 #dust{position:absolute;inset:0;width:100%;height:100%}
-
-/* botões */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 10px 0 28px;border-radius:999px;background:var(--neon);color:#120d00;font-weight:700;font-size:15px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .3s;box-shadow:0 10px 34px rgba(255,215,0,.16)}
 .btn i{width:38px;height:38px;border-radius:50%;background:#120d00;color:var(--neon);display:grid;place-items:center;font-style:normal;font-size:16px;transition:transform .35s var(--ease)}
 .btn:hover{background:var(--neon3);box-shadow:0 14px 44px rgba(255,215,0,.26)}.btn:hover i{transform:translateX(3px)}
 .btn:active{transform:scale(.97)}
 .btn.full{width:100%}
-
-/* nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:55;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
 .nav.s{background:rgba(5,5,5,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--bd)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
@@ -54,30 +47,22 @@ h2 em{font-style:normal;color:var(--neon)}
 .nav ul{display:none;list-style:none;gap:30px;font-size:14px;color:var(--mut)}.nav ul a:hover{color:var(--white)}
 .nav .mini{font-size:13px;font-weight:700;color:#120d00;background:var(--neon);padding:10px 18px;border-radius:999px}
 @media(min-width:860px){.nav ul{display:flex}}
-
-/* hero */
 .hero{min-height:100svh;display:flex;align-items:center;text-align:center;padding-block:120px 80px}
 .hero .wrap{display:flex;flex-direction:column;align-items:center}
-.pill{font-size:13px;font-weight:600;color:var(--neon3);border:1px solid var(--bd);background:rgba(255,215,0,.05);padding:8px 16px;border-radius:999px}
 .hero h1{font-weight:800;font-size:clamp(2.4rem,9vw,5.2rem);line-height:1.02;letter-spacing:-.045em;margin-top:26px;text-wrap:balance}
 .hero h1 span{background:linear-gradient(180deg,#FFF3A0,var(--neon) 60%,#C99A00);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{margin:24px auto 36px;max-width:520px;color:var(--mut);font-size:clamp(16px,1.8vw,19px)}
-.pr{margin-top:14px;font-size:13.5px;color:var(--neon3)}
 .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:44px;max-width:560px}
 .tags b{font-weight:500;font-size:12.5px;color:var(--mut);border:1px solid rgba(255,215,0,.14);padding:6px 13px;border-radius:999px}
 .ld>*{opacity:0;transform:translateY(16px);animation:up 1.1s var(--ease) forwards}
 .ld>*:nth-child(2){animation-delay:.12s}.ld>*:nth-child(3){animation-delay:.24s}.ld>*:nth-child(4){animation-delay:.36s}.ld>*:nth-child(5){animation-delay:.5s}
 @keyframes up{to{opacity:1;transform:none}}
-
-/* ciclo */
 .ch{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
 .c .ch{justify-content:center}
 .ch button{font:inherit;font-size:15px;color:var(--mut);background:rgba(26,21,0,.6);border:1px solid var(--bd);border-radius:999px;padding:12px 20px;cursor:pointer;transition:all .5s var(--ease)}
 .ch button:hover{border-color:rgba(255,215,0,.4)}
 .ch button.on{color:var(--white);background:rgba(255,215,0,.1);border-color:rgba(255,215,0,.55)}
 .res{margin:30px auto 0;max-width:520px;min-height:56px;color:var(--neon3);font-size:16.5px;font-weight:500;transition:opacity .5s}
-
-/* área de membros */
 .app{margin-top:48px;border:1px solid rgba(255,215,0,.28);border-radius:28px;background:linear-gradient(180deg,rgba(26,21,0,.88),rgba(10,10,10,.94));overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.55),0 0 80px rgba(255,215,0,.06)}
 .app-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--bd);font-size:12.5px;color:var(--mut)}
 .d3{display:flex;gap:6px}.d3 i{width:9px;height:9px;border-radius:50%;background:rgba(255,215,0,.25)}
@@ -86,89 +71,26 @@ h2 em{font-style:normal;color:var(--neon)}
 .app-body{padding:26px 0 30px}
 .hi{padding:0 22px;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .hi h3{font-size:clamp(1.25rem,3.4vw,1.7rem);letter-spacing:-.03em}.hi p{color:var(--mut);font-size:14px;margin-top:2px}
-.av{flex:0 0 44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--neon3),var(--neon));color:#120d00;font-weight:800;display:grid;place-items:center}
+.vp{flex:0 0 auto;font-size:12.5px;font-weight:800;color:#120d00;background:linear-gradient(135deg,#FFF3A0,var(--neon));padding:9px 16px;border-radius:999px}
+.st3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:22px 22px 0}
+.st3 div{border:1px solid var(--bd);border-radius:16px;padding:14px 10px;text-align:center;font-size:12.5px;color:var(--mut);background:rgba(255,215,0,.04)}
+.st3 b{display:block;font-size:clamp(1.3rem,4.4vw,1.8rem);letter-spacing:-.03em;color:var(--neon2);line-height:1.1}
 .rl{padding:30px 22px 0}
 .rl-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .rl-h h4{font-size:15px;font-weight:700;color:var(--neon3)}
-.ar{display:none;gap:8px}
-.ar button{width:38px;height:38px;border-radius:50%;border:1px solid var(--bd);background:transparent;color:var(--neon);font-size:15px;cursor:pointer;transition:all .3s}.ar button:hover{background:var(--neon);color:#000}
-@media(hover:hover) and (min-width:700px){.ar{display:flex}}
-.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:26px;scrollbar-width:none;margin-inline:-22px;padding:4px 26px 10px;cursor:grab}
-.rail::after{content:"";flex:0 0 12px}
-.rail::-webkit-scrollbar{display:none}.rail.dr{cursor:grabbing;scroll-snap-type:none}
-.pst{flex:0 0 clamp(140px,41vw,210px);aspect-ratio:2/3;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,215,0,.24);padding:0;background:#000;cursor:pointer;scroll-snap-align:start;transition:transform .5s var(--ease),border-color .3s,box-shadow .5s}
-.pst img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform .9s var(--ease)}
-.pst:hover{transform:translateY(-6px);border-color:var(--neon);box-shadow:0 22px 50px rgba(255,215,0,.18)}.pst:hover img{transform:scale(1.05)}
-.pst:active{transform:scale(.97)}
-.pst .pl{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;background:rgba(5,5,5,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(255,215,0,.5);display:grid;place-items:center;color:var(--neon);font-size:11px;padding-left:2px}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:4px 22px 10px;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.pst{flex:0 0 clamp(150px,42vw,220px);aspect-ratio:2/3;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,215,0,.24);background:#000;cursor:pointer;scroll-snap-align:start}
+.pst img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.pst .pl{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;background:rgba(5,5,5,.6);backdrop-filter:blur(6px);border:1px solid rgba(255,215,0,.5);display:grid;place-items:center;color:var(--neon);font-size:11px}
 .inf{display:grid;gap:12px;margin-top:22px}
 @media(min-width:760px){.inf{grid-template-columns:repeat(3,1fr);gap:16px}}
 .inf div{border:1px solid var(--bd);border-radius:20px;padding:22px;color:var(--mut);font-size:14.5px;background:rgba(26,21,0,.4)}
 .inf b{display:block;color:var(--white);font-size:16px;margin-bottom:4px}
-/* VIP */
-.app{position:relative;background:radial-gradient(ellipse at 50% -10%,rgba(255,215,0,.2),transparent 55%),linear-gradient(180deg,rgba(26,21,0,.92),rgba(8,8,8,.96));border-color:rgba(255,215,0,.4)}
-.vp{flex:0 0 auto;font-size:12.5px;font-weight:800;color:#120d00;background:linear-gradient(135deg,#FFF3A0,var(--neon));padding:9px 16px;border-radius:999px;box-shadow:0 0 28px rgba(255,215,0,.35)}
-.st3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:22px 22px 0}
-.st3 div{border:1px solid var(--bd);border-radius:16px;padding:14px 10px;text-align:center;font-size:12.5px;color:var(--mut);background:rgba(255,215,0,.04)}
-.st3 b{display:block;font-size:clamp(1.3rem,4.4vw,1.8rem);letter-spacing:-.03em;color:var(--neon2);line-height:1.1}
-.hint2{margin-left:auto;margin-right:10px;font-size:12px;color:var(--neon3);animation:nudge 1.8s ease-in-out infinite}
-@keyframes nudge{50%{transform:translateX(6px)}}
-@media(hover:hover) and (min-width:700px){.hint2{display:none}}
-.pst{flex:0 0 clamp(150px,44vw,232px)}
-.app.in .pst{animation:pin 1s var(--ease) backwards;animation-delay:calc(var(--i,0)*90ms)}
-@keyframes pin{from{opacity:0;transform:translateX(40px) scale(.94)}}
-.dv{flex:0 0 46px;display:flex;align-items:center;justify-content:center;position:relative}
-.dv::before{content:"";position:absolute;top:6%;bottom:6%;left:50%;width:1px;background:linear-gradient(transparent,var(--neon),transparent)}
-.dv span{position:relative;writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:var(--neon);background:#0d0a00;padding:14px 0}
-.pst.bn{border:1.5px solid var(--neon);box-shadow:0 0 0 1px rgba(255,215,0,.15),0 14px 46px rgba(255,215,0,.22)}
-.pst.bn::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,234,0,.28),transparent);transform:skewX(-18deg);animation:sh2 5s ease-in-out infinite;pointer-events:none}
-@keyframes sh2{0%,55%{left:-70%}100%{left:140%}}
-.rb{position:absolute;top:10px;left:10px;z-index:2;font-size:10.5px;font-weight:800;color:#120d00;background:var(--neon);padding:4px 10px;border-radius:999px}
-.pst.tz{display:grid;place-items:center;text-align:center;border-style:dashed;border-color:rgba(255,215,0,.45);color:var(--white)}
-.pst.tz img{position:absolute;inset:0;filter:blur(12px) brightness(.4) saturate(.8);transform:scale(1.15)}
-.pst.tz div{position:relative;padding:18px;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--neon)}
-.pst.tz b{color:var(--white);font-size:16px;line-height:1.25;letter-spacing:-.02em}
-.pst.tz small{font-size:12px;font-weight:700;color:#120d00;background:var(--neon);padding:7px 14px;border-radius:999px}
-.tg.gd{background:var(--neon);color:#120d00;border-color:var(--neon)}
-/* modal do módulo */
-.md{position:fixed;inset:0;z-index:95;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
-.md .bk{position:absolute;inset:0;background:rgba(0,0,0,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .45s}
-.md .pn{position:relative;width:100%;max-width:960px;max-height:92svh;overflow:auto;background:var(--deep);border:1px solid rgba(255,215,0,.3);border-bottom:0;border-radius:28px 28px 0 0;transform:translateY(105%);transition:transform .65s var(--ease);overscroll-behavior:contain}
-.md.on{pointer-events:auto}.md.on .bk{opacity:1}.md.on .pn{transform:none}
-.pn .im{position:relative;height:290px;overflow:hidden}
-.pn .im img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
-.pn .im::after{content:"";position:absolute;inset:auto 0 0;height:60%;background:linear-gradient(transparent,var(--deep))}
-.pn .bd{padding:4px 24px calc(30px + env(safe-area-inset-bottom));position:relative;margin-top:-34px;z-index:2}
-.pn .x{position:absolute;top:14px;right:14px;z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,215,0,.4);background:rgba(5,5,5,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--neon);font-size:20px;cursor:pointer}
-.tg{display:inline-block;font-size:12px;font-weight:700;color:var(--neon3);border:1px solid var(--bd);background:rgba(255,215,0,.07);padding:5px 12px;border-radius:999px}
-.pn h3{font-size:clamp(1.9rem,6vw,2.5rem);letter-spacing:-.04em;margin:12px 0 8px;line-height:1.05}
-.pn .ds{color:var(--mut);font-size:15px}
-.pn h5{font-size:13px;font-weight:600;color:var(--neon3);margin:26px 0 8px}
-.ls{list-style:none}
-.ls li{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid rgba(255,215,0,.12);font-size:15px}
-.ls .nm{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:700;border:1px solid var(--bd);color:var(--neon3)}
-.ls .tt{flex:1;line-height:1.35}
-.ls em{font-style:normal;font-size:11.5px;font-weight:700;color:var(--mut);display:flex;align-items:center;gap:6px;white-space:nowrap}
-.ls li.op .nm{background:var(--neon);color:#120d00;border-color:var(--neon)}.ls li.op em{color:#120d00;background:var(--neon);padding:4px 10px;border-radius:999px}
-.ls li.cl .tt{color:rgba(255,253,245,.62)}
-.nt{margin-top:22px;padding:18px;border-radius:18px;border:1px solid var(--bd);background:linear-gradient(135deg,rgba(255,215,0,.12),transparent);font-size:14px;color:var(--mut)}.nt b{color:var(--neon3)}
-.nvb{display:flex;gap:10px;margin-top:22px}
-.nvb button{flex:1;font:inherit;font-size:13.5px;font-weight:600;color:var(--neon3);background:transparent;border:1px solid var(--bd);border-radius:999px;padding:13px 10px;cursor:pointer;transition:border-color .3s}.nvb button:hover{border-color:var(--neon)}
-.pn .btn{margin-top:14px;width:100%}
-@media(min-width:820px){
- .md{align-items:center;padding:24px}
- .md .pn{display:grid;grid-template-columns:340px 1fr;border-bottom:1px solid rgba(255,215,0,.3);border-radius:28px;transform:translateY(24px) scale(.97);opacity:0;transition:transform .65s var(--ease),opacity .4s}
- .md.on .pn{transform:none;opacity:1}
- .pn .im{height:auto;min-height:100%}.pn .im img{object-position:50% 30%}
- .pn .im::after{inset:0 0 0 auto;width:45%;height:auto;background:linear-gradient(90deg,transparent,var(--deep))}
- .pn .bd{margin-top:0;padding:40px 40px 36px 12px}
-}
 
-/* resultados */
-.res2{display:grid;gap:48px;align-items:center}
-@media(min-width:900px){.res2{grid-template-columns:minmax(300px,420px) 1fr;gap:72px}}
-.sl{position:relative;width:100%;max-width:min(100%,calc(80vh*.5625));aspect-ratio:9/16;margin-inline:auto;border-radius:26px;overflow:hidden;border:1px solid rgba(255,215,0,.3);background:#000;--p:50%;touch-action:pan-y;user-select:none;box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(255,215,0,.08)}
-.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+/* SLIDER DO PEDRO */
+.sl{position:relative;width:100%;max-width:360px;aspect-ratio:9/16;margin-inline:auto;border-radius:26px;overflow:hidden;border:1px solid rgba(255,215,0,.3);background:#000;--p:50%;touch-action:pan-y;user-select:none;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%;pointer-events:none}
 .sl .af{clip-path:inset(0 0 0 var(--p))}
 .sl .ln{position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:var(--neon3);transform:translateX(-50%);z-index:2;box-shadow:0 0 14px rgba(255,215,0,.7)}
 .sl .ln::after{content:"‹ ›";position:absolute;top:50%;left:50%;width:46px;height:46px;border-radius:50%;background:var(--neon);color:#120d00;display:grid;place-items:center;transform:translate(-50%,-50%);font-weight:800;font-size:15px;letter-spacing:2px}
@@ -176,90 +98,71 @@ h2 em{font-style:normal;color:var(--neon)}
 .lb{position:absolute;top:14px;z-index:3;font-size:12px;font-weight:700;background:rgba(5,5,5,.66);backdrop-filter:blur(6px);color:var(--white);padding:6px 13px;border-radius:999px;border:1px solid rgba(255,215,0,.3)}
 .lb.l{left:14px}.lb.r{right:14px;background:var(--neon);color:#120d00;border-color:var(--neon)}
 .cap{text-align:center;color:var(--mut);font-size:13.5px;margin-top:14px}
-.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;margin-top:30px;padding-bottom:6px}
-.strip::-webkit-scrollbar{display:none}
-.strip button{flex:0 0 auto;height:clamp(210px,28vw,290px);border:1px solid var(--bd);border-radius:18px;overflow:hidden;background:#000;cursor:zoom-in;scroll-snap-align:start;padding:0;transition:border-color .3s,transform .4s var(--ease)}
-.strip button:hover{border-color:var(--neon);transform:translateY(-3px)}
-.strip img{height:100%;width:auto;max-width:none}
-.zm{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .35s;cursor:zoom-out}
-.zm.on{opacity:1;pointer-events:auto}.zm img{max-height:88svh;max-width:100%;border-radius:14px;border:1px solid var(--bd)}
-.zm b{position:absolute;top:18px;right:22px;font-size:28px;color:var(--neon);font-weight:400}
 
-/* vip */
+/* OUTROS ANTES E DEPOIS EMPILHADOS */
+.other-photos{display:grid;gap:20px;margin-top:40px;max-width:420px;margin-inline:auto}
+.other-photos img{width:100%;border-radius:20px;border:1px solid var(--bd)}
+
 .vip{margin-top:44px;border-radius:30px;padding:1px;background:linear-gradient(160deg,rgba(255,234,0,.7),rgba(255,215,0,.06) 45%,rgba(255,215,0,.45))}
 .vip>div{border-radius:29px;background:radial-gradient(circle at 50% 0,rgba(255,215,0,.14),transparent 60%),var(--deep);padding:clamp(28px,5vw,56px)}
 .vip ul{list-style:none;display:grid;gap:4px 40px;margin-bottom:34px}
 @media(min-width:760px){.vip ul{grid-template-columns:1fr 1fr}}
 .vip li{padding:18px 0;border-top:1px solid rgba(255,215,0,.12);color:var(--mut);font-size:15px}
 .vip li b{display:block;color:var(--white);font-size:16.5px;margin-bottom:2px}
-
-/* criador */
 .fb{display:grid;gap:36px;align-items:center}
 @media(min-width:820px){.fb{grid-template-columns:.8fr 1fr;gap:80px}}
 .fb .ph{border-radius:28px;overflow:hidden;border:1px solid var(--bd);aspect-ratio:4/5;background:#0a0a0a;max-width:460px;width:100%;margin-inline:auto}
-.fb .ph img{width:100%;height:100%;object-fit:cover}
+.fb .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .fb h3{font-size:1.1rem;color:var(--neon3);font-weight:600;margin-bottom:14px}
 .qt{font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:600;line-height:1.25;letter-spacing:-.03em}.qt em{font-style:normal;color:var(--neon)}
 .lk{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
-.lk a{font-weight:600;font-size:14px;padding:12px 22px;border:1px solid var(--bd);border-radius:999px;color:var(--neon3);transition:all .3s}.lk a:hover{border-color:var(--neon)}
-
-/* oferta */
+.lk a{font-weight:600;font-size:14px;padding:12px 22px;border:1px solid var(--bd);border-radius:999px;color:var(--neon3)}
 .of{max-width:640px;margin:44px auto 0;border-radius:30px;padding:1px;background:linear-gradient(160deg,rgba(255,234,0,.75),rgba(255,215,0,.06) 45%,rgba(255,215,0,.45));text-align:left}
 .of>div{border-radius:29px;background:radial-gradient(circle at 50% 0,rgba(255,215,0,.16),transparent 55%),var(--deep);padding:clamp(24px,5vw,44px)}
 .stk{list-style:none}
 .stk li{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px solid rgba(255,215,0,.12)}
 .stk li:first-child{border-top:0;padding-top:0}
-.ck2{flex:0 0 26px;height:26px;border-radius:50%;background:var(--neon);color:#120d00;display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:2px;font-style:normal}
+.ck2{flex:0 0 26px;height:26px;border-radius:50%;background:var(--neon);color:#120d00;display:grid;place-items:center;font-size:13px;font-weight:800}
 .stk b{display:block;font-size:16px}.stk span{color:var(--mut);font-size:14px}
-.of.in .stk li{animation:pin2 .8s var(--ease) backwards;animation-delay:calc(var(--i)*110ms)}
-@keyframes pin2{from{opacity:0;transform:translateY(14px)}}
 .pc{margin-top:30px;padding-top:30px;border-top:1px dashed rgba(255,215,0,.35);text-align:center}
-.sp{display:inline-block;font-size:12.5px;font-weight:800;color:#120d00;background:var(--neon);padding:7px 16px;border-radius:999px;animation:glow 3s ease-in-out infinite}
-@keyframes glow{50%{box-shadow:0 0 28px rgba(255,215,0,.55)}}
+.sp{display:inline-block;font-size:12.5px;font-weight:800;color:#120d00;background:var(--neon);padding:7px 16px;border-radius:999px}
 .de{margin-top:22px;color:var(--mut);font-size:18px}
 .de s{text-decoration-color:#ff6b6b;text-decoration-thickness:2px;font-weight:700;font-size:22px}
 .por{color:var(--mut);font-size:14px;margin-top:6px}
 .num{display:flex;align-items:flex-start;justify-content:center;gap:6px;line-height:1;margin:6px 0 10px}
 .num small{font-size:clamp(1.4rem,5vw,2rem);font-weight:800;margin-top:.7em;color:var(--neon3)}
-.num span{font-size:clamp(5.5rem,24vw,8.5rem);font-weight:800;letter-spacing:-.06em;background:linear-gradient(180deg,#FFF3A0,var(--neon) 65%,#9a7400);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.num span{font-size:clamp(5.5rem,24vw,8.5rem);font-weight:800;letter-spacing:-.06em;background:linear-gradient(180deg,#FFF3A0,var(--neon) 65%,#9a7400);-webkit-background-clip:text;background-clip:text;color:transparent}
 .off{font-size:14px;color:var(--neon3);margin-bottom:26px}
 .pc .btn{width:100%;max-width:420px}
 .gn2{margin-top:14px;font-size:13px;color:var(--mut)}
-/* garantia */
 .gt .n{font-size:clamp(6rem,22vw,10rem);font-weight:800;line-height:.9;letter-spacing:-.06em;background:linear-gradient(180deg,#FFF3A0,var(--neon) 65%,#9a7400);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gt .l{font-weight:600;color:var(--neon3);margin:6px 0 24px}
 .gt p{color:var(--mut);max-width:560px;margin:0 auto 14px}
-
-/* faq */
 .fq{max-width:760px;margin:40px auto 0;border-top:1px solid var(--bd)}.fi{border-bottom:1px solid var(--bd)}
 .fi button{width:100%;font:inherit;font-weight:600;color:inherit;background:none;border:0;text-align:left;padding:22px 0;display:flex;justify-content:space-between;gap:14px;cursor:pointer;font-size:16px}
 .fi button span{color:var(--neon);font-size:22px;line-height:1;transition:transform .4s var(--ease)}.fi.on button span{transform:rotate(45deg)}
 .fa{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}.fi.on .fa{grid-template-rows:1fr}
 .fa div{overflow:hidden;color:var(--mut);font-size:15px}.fa p{padding-bottom:22px}
-
 .fin{text-align:center;background:radial-gradient(ellipse at 50% 120%,rgba(255,215,0,.2),transparent 60%)}
 footer{padding:36px var(--pad) 110px;text-align:center;font-size:12.5px;color:var(--mut);border-top:1px solid var(--bd)}
 .sticky{position:fixed;left:0;right:0;bottom:0;transform:translateY(120%);padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(5,5,5,.95) 40%);z-index:50;transition:transform .6s var(--ease)}.sticky.show{transform:none}
 @media(min-width:860px){.sticky{display:none}footer{padding-bottom:36px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.rv,.ld>*{opacity:1;transform:none}#fx .b{opacity:.5}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.rv,.ld>*{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div id="fx" aria-hidden="true"><div class="b"></div><div class="b"></div><div class="b"></div><div class="b"></div><canvas id="dust"></canvas></div>
-
 <nav class="nav" id="nav"><div class="wrap">
-  <a href="#" class="logo">APOLLO <span>GLOW UP</span></a>
+  <a href="#" class="logo">APOLO <span>GLOW UP</span></a>
   <ul><li><a href="#sistema">Sistema</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#vip">Comunidade VIP</a></li><li><a href="#faq">Dúvidas</a></li></ul>
   <a class="mini" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Entrar</a>
 </div></nav>
-
 <header class="hero"><div class="wrap ld">
-  <h1>O seu <span>glow up masculino.</span><br>Do jeito que o Apollo faria.</h1>
+  <h1>O seu <span>glow up masculino.</span><br>Do jeito que o Apolo faria.</h1>
   <p>Pele, rosto, postura, shape, dieta, cabelo e mentalidade. Na ordem certa, com acompanhamento e sem enrolação.</p>
-  <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a>
+  <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apolo <i>→</i></a>
   <div class="tags"><b>Pele</b><b>Rosto</b><b>Postura</b><b>Shape</b><b>Dieta</b><b>Cabelo</b><b>Mentalidade</b></div>
 </div></header>
-
 <section class="alt c"><div class="wrap">
   <div class="k rv">Se isso soa familiar</div>
   <h2 class="rv">Você tenta. Mas parece que nada muda <em>de verdade?</em></h2>
@@ -273,52 +176,47 @@ footer{padding:36px var(--pad) 110px;text-align:center;font-size:12.5px;color:va
   </div>
   <p class="res" id="res"></p>
 </div></section>
-
 <section id="sistema"><div class="wrap">
-  <div class="c"><div class="k rv">Acesso VIP</div><h2 class="rv">Isso é o que está esperando <em>por você lá dentro.</em></h2><p class="sub rv">Uma prévia da área de membros do Apollo, com só uma parte dos +10 módulos. Toque em qualquer capa e espie por dentro.</p></div>
+  <div class="c"><div class="k rv">Acesso VIP</div><h2 class="rv">Isso é o que está esperando <em>por você lá dentro.</em></h2><p class="sub rv">Uma prévia da área de membros do Apolo, com só uma parte dos +10 módulos. Toque em qualquer capa e espie por dentro.</p></div>
   <div class="app rv">
-    <div class="app-top"><div class="d3"><i></i><i></i><i></i></div><span>Apollo · Área de membros</span><b>Prévia</b></div>
+    <div class="app-top"><div class="d3"><i></i><i></i><i></i></div><span>Apolo · Área de membros</span><b>Prévia</b></div>
     <div class="app-body">
-      <div class="hi"><div><h3>Bem-vindo ao Apollo</h3><p>Seu acesso VIP está liberado.</p></div><div class="vp">✦ Acesso VIP</div></div>
+      <div class="hi"><div><h3>Bem-vindo ao Apolo</h3><p>Seu acesso VIP está liberado.</p></div><div class="vp">✦ Acesso VIP</div></div>
       <div class="st3"><div><b>+10</b>módulos</div><div><b>3</b>bônus</div><div><b>VIP</b>comunidade</div></div>
-      <div class="rl"><div class="rl-h"><h4>Seu conteúdo</h4><span class="hint2">Arraste →</span><div class="ar"><button data-r="r1" data-d="-1" aria-label="Anterior">←</button><button data-r="r1" data-d="1" aria-label="Próximo">→</button></div></div><div class="rail" id="r1"></div></div>
+      <div class="rl"><div class="rl-h"><h4>Seu conteúdo</h4></div><div class="rail" id="r1"></div></div>
     </div>
   </div>
   <div class="inf">
-    <div class="rv"><b>Muito mais lá dentro</b>Isso é só uma prévia. Dentro do Apollo são +10 módulos e muito mais conteúdo.</div>
+    <div class="rv"><b>Muito mais lá dentro</b>Isso é só uma prévia. Dentro do Apolo são +10 módulos e muito mais conteúdo.</div>
     <div class="rv"><b>Tira-dúvidas</b>Travou em alguma aula? Canal direto pra perguntar e pedir ajuste.</div>
     <div class="rv"><b>Comunicação por módulo</b>Apoio e conversa organizados por módulo, pra você nunca ficar perdido.</div>
   </div>
-  <div class="c" style="margin-top:40px"><a class="btn rv" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a></div>
+  <div class="c" style="margin-top:40px"><a class="btn rv" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apolo <i>→</i></a></div>
 </div></section>
-
 <section class="alt" id="resultados"><div class="wrap">
-  <div class="c" style="margin-bottom:56px"><div class="k rv">Resultados</div><h2 class="rv">Veja a diferença <em>de perto.</em></h2><p class="sub rv">Arraste a linha. Toque nas fotos pra ampliar.</p></div>
-  <div class="res2">
-    <div class="rv">
-      <div class="sl" id="sl">
-        <img src="src/img/antes2.jpeg" alt="Pedro antes" width="892" height="1600" loading="lazy" decoding="async">
-        <img class="af" src="src/img/depois2.jpeg" alt="Pedro depois" width="900" height="1600" loading="lazy" decoding="async">
-        <span class="lb l">Antes</span><span class="lb r">Depois</span><div class="ln"></div>
-        <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
-      </div>
-      <p class="cap">Pedro · Shape</p>
+  <div class="c" style="margin-bottom:40px"><div class="k rv">Resultados</div><h2 class="rv">Veja a diferença <em>de perto.</em></h2><p class="sub rv">Arraste a linha no Pedro. As outras fotos estão uma embaixo da outra.</p></div>
+  <div class="rv">
+    <div class="sl" id="sl">
+      <img src="src/img/antes2.jpeg" alt="Pedro antes" loading="lazy">
+      <img class="af" src="src/img/depois2.jpeg" alt="Pedro depois" loading="lazy">
+      <span class="lb l">Antes</span><span class="lb r">Depois</span><div class="ln"></div>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
     </div>
-    <div class="rv">
-      <h3 style="font-size:1.5rem;letter-spacing:-.03em;margin-bottom:8px">Rosto, cabelo e pele</h3>
-      <p class="sub" style="margin-top:0">Alunos que aplicaram o método.</p>
-      <div class="strip" id="strip">
-        <button><img src="src/img/antesedepois2.jpeg" alt="Antes e depois 1" width="983" height="556" loading="lazy" decoding="async"></button>
-        <button><img src="src/img/antesedepois4.jpeg" alt="Antes e depois 2" width="940" height="471" loading="lazy" decoding="async"></button>
-        <button><img src="src/img/antesedepois6.jpeg" alt="Antes e depois 3" width="1018" height="1013" loading="lazy" decoding="async"></button>
-      </div>
-      <a class="btn" style="margin-top:34px" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero esse resultado <i>→</i></a>
-    </div>
+    <p class="cap">Pedro · Shape</p>
   </div>
+  <div class="c" style="margin-top:56px">
+    <h3 style="font-size:1.4rem;letter-spacing:-.03em;margin-bottom:8px">Rosto, cabelo e pele</h3>
+    <p class="sub" style="margin-top:0">Alunos que aplicaram o método.</p>
+  </div>
+  <div class="other-photos">
+    <img src="src/img/antesedepois2.jpeg" alt="Antes e depois 1" loading="lazy">
+    <img src="src/img/antesedepois4.jpeg" alt="Antes e depois 2" loading="lazy">
+    <img src="src/img/antesedepois6.jpeg" alt="Antes e depois 3" loading="lazy">
+  </div>
+  <div class="c" style="margin-top:36px"><a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero esse resultado <i>→</i></a></div>
 </div></section>
-
 <section id="vip"><div class="wrap">
-  <div class="k rv">Comunidade VIP Apollo</div>
+  <div class="k rv">Comunidade VIP Apolo</div>
   <h2 class="rv">Você não faz o glow up <em>sozinho.</em></h2>
   <div class="vip rv"><div>
     <ul>
@@ -327,69 +225,57 @@ footer{padding:36px var(--pad) 110px;text-align:center;font-size:12.5px;color:va
       <li><b>Perguntas e ajustes</b>Travou? Eu ajudo a destravar e você segue.</li>
       <li><b>Acompanhamento</b>Suporte pra você não sumir no meio do caminho.</li>
     </ul>
-    <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Entrar no Apollo VIP <i>→</i></a>
+    <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Entrar no Apolo VIP <i>→</i></a>
   </div></div>
 </div></section>
-
 <section class="alt"><div class="wrap fb">
-  <div class="ph rv"><img src="src/img/fabiokoziel.jpeg" alt="Fabio Koziel" loading="lazy" decoding="async" onerror="this.style.opacity=.2"></div>
+  <div class="ph rv"><img src="src/img/fabiokoziel.jpeg" alt="Fabio Koziel" loading="lazy"></div>
   <div class="rv">
     <div class="k">Quem criou</div>
-    <h3>Fabio Koziel · Criador do Apollo Glow Up</h3>
-    <p class="qt">Eu não criei o Apollo pra você parecer comigo. Criei pra mostrar <em>até onde você pode chegar.</em></p>
+    <h3>Fabio Koziel · Criador do Apolo Glow Up</h3>
+    <p class="qt">Eu não criei o Apolo pra você parecer comigo. Criei pra mostrar <em>até onde você pode chegar.</em></p>
     <div class="lk"><a href="https://www.instagram.com/fabio.koziel/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@apollomthd" target="_blank" rel="noopener">TikTok</a></div>
   </div>
 </div></section>
-
 <section class="alt" id="oferta"><div class="wrap c">
-  <div class="k rv">Sua entrada no Apollo</div>
+  <div class="k rv">Sua entrada no Apolo</div>
   <h2 class="rv">Tudo o que você leva <em>ao entrar.</em></h2>
   <div class="of rv"><div>
-    <ul class="stk"><li style="--i:0"><i class="ck2">✓</i><div><b>+10 módulos completos</b><span>Rosto, pele, postura, shape, dieta, cabelo, lábios e muito mais.</span></div></li><li style="--i:1"><i class="ck2">✓</i><div><b>Bônus: Mentalidade</b><span>Consistência pra você não desistir na 3ª semana.</span></div></li><li style="--i:2"><i class="ck2">✓</i><div><b>Bônus: Guia visual rápido</b><span>Um resumo pra consultar no dia a dia.</span></div></li><li style="--i:3"><i class="ck2">✓</i><div><b>Bônus: Comunidade VIP</b><span>Você não faz o glow up sozinho.</span></div></li><li style="--i:4"><i class="ck2">✓</i><div><b>Tira-dúvidas direto</b><span>Travou? Canal direto pra perguntar e pedir ajuste.</span></div></li><li style="--i:5"><i class="ck2">✓</i><div><b>Comunicação por módulo</b><span>Apoio organizado por módulo, pra você nunca ficar perdido.</span></div></li><li style="--i:6"><i class="ck2">✓</i><div><b>Acompanhamento</b><span>Suporte pra você não sumir no meio do caminho.</span></div></li><li style="--i:7"><i class="ck2">✓</i><div><b>30 dias de garantia</b><span>O risco é meu, nos termos da garantia.</span></div></li></ul>
+    <ul class="stk"><li><i class="ck2">✓</i><div><b>+10 módulos completos</b><span>Rosto, pele, postura, shape, dieta, cabelo, lábios e muito mais.</span></div></li><li><i class="ck2">✓</i><div><b>Bônus: Mentalidade</b><span>Consistência pra você não desistir na 3ª semana.</span></div></li><li><i class="ck2">✓</i><div><b>Bônus: Guia visual rápido</b><span>Um resumo pra consultar no dia a dia.</span></div></li><li><i class="ck2">✓</i><div><b>Bônus: Comunidade VIP</b><span>Você não faz o glow up sozinho.</span></div></li><li><i class="ck2">✓</i><div><b>Tira-dúvidas direto</b><span>Travou? Canal direto pra perguntar e pedir ajuste.</span></div></li><li><i class="ck2">✓</i><div><b>Comunicação por módulo</b><span>Apoio organizado por módulo, pra você nunca ficar perdido.</span></div></li><li><i class="ck2">✓</i><div><b>Acompanhamento</b><span>Suporte pra você não sumir no meio do caminho.</span></div></li><li><i class="ck2">✓</i><div><b>30 dias de garantia</b><span>O risco é meu, nos termos da garantia.</span></div></li></ul>
     <div class="pc">
       <span class="sp">✦ Condição especial</span>
       <div class="de">De <s>R$ 197</s></div>
       <div class="por">por apenas</div>
       <div class="num"><small>R$</small><span id="pv">35</span></div>
       <div class="off">82% de desconto · você economiza R$ 162</div>
-      <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a>
+      <a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apolo <i>→</i></a>
       <p class="gn2">30 dias de garantia · O risco é meu</p>
     </div>
   </div></div>
 </div></section>
-
 <section class="gt c"><div class="wrap">
   <div class="n rv">30</div>
   <div class="l rv">dias de garantia</div>
   <p class="rv">Entre, aplique o método e tire suas dúvidas quando precisar. Se em 30 dias seguindo o sistema você não perceber evolução, pode pedir o reembolso nos termos da garantia.</p>
   <p class="rv" style="color:var(--neon3)">O risco é meu.</p>
 </div></section>
-
 <section class="alt" id="faq"><div class="wrap c">
   <div class="k rv">Dúvidas</div><h2 class="rv">Antes de entrar, <em>tire suas dúvidas.</em></h2>
   <div class="fq c" id="fq" style="text-align:left"></div>
 </div></section>
-
 <section class="fin"><div class="wrap" style="display:flex;flex-direction:column;align-items:center">
   <h2 class="rv" style="max-width:720px">Daqui a 30 dias, você pode se olhar no espelho e <em>gostar do que vê.</em></h2>
   <p class="sub rv" style="margin-bottom:34px">O sistema está pronto. Falta você entrar.</p>
-  <a class="btn rv" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a>
+  <a class="btn rv" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apolo <i>→</i></a>
 </div></section>
-
-<footer>© 2026 APOLLO GLOW UP · Fabio Koziel. Todos os direitos reservados.<br><a href="#">Termos de Uso</a> · <a href="#">Política de Privacidade</a></footer>
-<div class="sticky" id="sticky"><a class="btn full" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a></div>
-<div class="md" id="md" aria-hidden="true"><div class="bk" id="mbk"></div><div class="pn" id="pn" role="dialog" aria-modal="true"></div></div>
-<div class="zm" id="zm"><b>×</b><img alt=""></div>
-
+<footer>© 2026 APOLO GLOW UP · Fabio Koziel. Todos os direitos reservados.<br><a href="#">Termos de Uso</a> · <a href="#">Política de Privacidade</a></footer>
+<div class="sticky" id="sticky"><a class="btn full" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apolo <i>→</i></a></div>
 <script>
 const $=s=>document.querySelector(s);
-// nav + sticky
 const nav=$('#nav'),st=$('#sticky');let tk=false;
 addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{nav.classList.toggle('s',scrollY>30);st.classList.toggle('show',scrollY>innerHeight*.6);tk=false})},{passive:true});
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-// poeira de luz (quase invisível)
 (()=>{const c=$('#dust'),x=c.getContext('2d');if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
 let w,h,d=Math.min(devicePixelRatio||1,2),P=[];
 const N=innerWidth<700?26:44;
@@ -400,64 +286,30 @@ for(let i=0;i<N;i++)P.push({x:Math.random()*w,y:Math.random()*h,r:.5+Math.random
  for(const p of P){p.y+=p.v;p.x+=Math.sin(t/3000+p.s)*.12;if(p.y>h+5){p.y=-5;p.x=Math.random()*w}
   x.globalAlpha=p.a;x.fillStyle='#FFE566';x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
  requestAnimationFrame(f)})(0)})();
-
-// ciclo (suave)
-const M=["","Isso é mais comum do que você imagina.","Não é falta de esforço. É falta de direção.","Quando o caminho é confuso, o esforço se perde.","Dá pra mudar isso. Um passo de cada vez.","O Apollo foi feito exatamente pra esse momento."];
+const M=["","Isso é mais comum do que você imagina.","Não é falta de esforço. É falta de direção.","Quando o caminho é confuso, o esforço se perde.","Dá pra mudar isso. Um passo de cada vez.","O Apolo foi feito exatamente pra esse momento."];
 const dg=[...document.querySelectorAll('#dg button')],rs=$('#res');
 dg.forEach(b=>b.onclick=()=>{b.classList.toggle('on');const n=dg.filter(x=>x.classList.contains('on')).length;rs.style.opacity=0;setTimeout(()=>{rs.textContent=M[n];rs.style.opacity=1},220)});
-
-// área de membros
-const LOCK='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>';
 const MD=[
-["Rosto","Módulo 1","1","Mandíbula, olhar e presença. Menos inchaço, mais definição e ajustes simples que se notam de perto.",["Entendendo a estrutura do seu rosto","Mandíbula e definição","Olhar e sobrancelhas","Hábitos que reduzem o inchaço","Ajustes do dia a dia"]],
-["Pele","Módulo 2","2","Pele ruim te sabota antes de você abrir a boca. Skin care na ordem certa, sem produto aleatório.",["Skin care na ordem certa","Limpeza, hidratação e proteção","Escolhendo produtos com critério","Hábitos que melhoram a pele","Rotina de manhã e de noite"]],
-["Postura","Módulo 3","3","Altura tem limite. Presença não. Mude como você ocupa o espaço e como te percebem.",["Como ocupar o espaço","Ombros, pescoço e coluna","Como você é percebido","Correções pro dia a dia"]],
-["Shape","Módulo 4","4","Treino com direção, sem se perder em vídeo solto. Progressão clara e constância real.",["Treino com direção","Progressão clara","O frame que valoriza a roupa","Constância na academia"]],
-["Dieta","Módulo 5","5","Comer bem sem dieta maluca. Combustível pro shape e pro rosto, com uma rotina que cabe na vida.",["Comer bem sem dieta maluca","Combustível pro shape e pro rosto","Rotina que cabe na vida","Adaptando ao seu bolso"]],
-["Cabelo","Módulo 6","6","O upgrade mais rápido que existe. O corte certo muda o personagem numa ida ao barbeiro.",["Corte certo pro seu rosto","Como falar com o barbeiro","Cuidado e finalização","Rotina de cabelo"]],
-["Lábios","Módulo 7","7","Os detalhes que fazem diferença de perto: cuidado, hidratação e hábitos simples.",["Cuidado e hidratação","Hábitos que ajudam","Detalhes que fazem diferença"]],
-["Mentalidade","Bônus","8","Sem isso, o resto desmonta. Consistência, constância e uma autoimagem que acompanha o resultado.",["Consistência de verdade","Parar de desistir na 3ª semana","Autoimagem que acompanha o resultado"]],
-["Guia visual rápido","Bônus","9","Um resumo visual pra consultar no dia a dia, sem precisar rever aula por aula.",["Resumo visual de cada módulo","Consulta rápida no dia a dia","Checklist de aplicação"]],
-["Comunidade VIP","Bônus","10","Você não faz o glow up sozinho. Apoio, tira-dúvidas e comunicação por módulo.",["Contato direto","Tira-dúvidas","Comunicação por módulo","Acompanhamento"]]];
-const CK='https://pay.cakto.com.br/wgzw8fh_1246972';
-const pst=(i,k)=>`<button class="pst${i>6?' bn':''}" style="--i:${k}" data-i="${i}" aria-label="${MD[i][1]}: ${MD[i][0]}">${i>6?'<span class="rb">Bônus</span>':''}<img src="src/img/${MD[i][2]}.png" alt="${MD[i][1]}: ${MD[i][0]}" width="400" height="600" loading="lazy" decoding="async"><span class="pl">▶</span></button>`;
-$('#r1').innerHTML=[0,1,2,3,4,5,6].map(i=>pst(i,i)).join('')+'<div class="dv"><span>Bônus</span></div>'+[7,8,9].map((i,k)=>pst(i,8+k)).join('')+`<a class="pst tz" style="--i:11" href="${CK}" target="_blank" rel="noopener"><img src="src/img/8.png" alt=""><div>${LOCK}<b>+ módulos e conteúdo lá dentro</b><small>Desbloquear tudo</small></div></a>`;
-document.querySelectorAll('.rail').forEach(r=>{let dn=false,sx=0,s0=0,mv=false;
- r.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;dn=true;mv=false;sx=e.clientX;s0=r.scrollLeft});
- addEventListener('pointermove',e=>{if(!dn)return;const dx=e.clientX-sx;if(Math.abs(dx)>5){mv=true;r.classList.add('dr')}if(mv)r.scrollLeft=s0-dx});
- addEventListener('pointerup',()=>{if(dn){dn=false;setTimeout(()=>r.classList.remove('dr'),0)}});
- r.addEventListener('click',e=>{if(mv){e.preventDefault();e.stopPropagation();mv=false;return}const b=e.target.closest('.pst');if(b)openM(+b.dataset.i)},true)});
-document.querySelectorAll('.ar button').forEach(b=>b.onclick=()=>{const r=$('#'+b.dataset.r);r.scrollBy({left:b.dataset.d*(r.querySelector('.pst').offsetWidth+14)*2,behavior:'smooth'})});
-const md=$('#md'),pn=$('#pn');let cur=0;
-function renderM(i){cur=i;const m=MD[i],nx=MD[(i+1)%10],pv=MD[(i+9)%10];
- pn.innerHTML=`<button class="x" id="mx" aria-label="Fechar">×</button><div class="im"><img src="src/img/${m[2]}.png" alt="${m[0]}"></div><div class="bd"><span class="tg${i>6?' gd':''}">${m[1]} · Prévia</span><h3>${m[0]}</h3><p class="ds">${m[3]}</p><h5>O que você vai ver neste módulo</h5><ul class="ls">${m[4].map((t,k)=>`<li class="${k?'cl':'op'}"><span class="nm">${k+1}</span><span class="tt">${t}</span><em>${k?LOCK+' Dentro do Apollo':'Prévia'}</em></li>`).join('')}</ul><div class="nt"><b>Isso é só uma prévia.</b> Dentro do Apollo são +10 módulos e muito mais conteúdo, além de tira-dúvidas e comunicação por módulo.</div><div class="nvb"><button data-g="-1">← ${pv[0]}</button><button data-g="1">${nx[0]} →</button></div><a class="btn" href="https://pay.cakto.com.br/wgzw8fh_1246972" target="_blank" rel="noopener">Quero entrar no Apollo <i>→</i></a></div>`;
- pn.scrollTop=0}
-function openM(i){renderM(i);md.classList.add('on');md.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';navigator.vibrate&&navigator.vibrate(8)}
-function closeM(){md.classList.remove('on');md.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-$('#mbk').onclick=closeM;
-pn.onclick=e=>{if(e.target.closest('#mx'))return closeM();const g=e.target.closest('[data-g]');if(g)renderM((cur+ +g.dataset.g+10)%10)};
-addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
-let ty=0;pn.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{passive:true});
-pn.addEventListener('touchend',e=>{if(innerWidth<820&&pn.scrollTop<=0&&e.changedTouches[0].clientY-ty>90)closeM()},{passive:true});
-
-// slider antes/depois + demonstração
+["Rosto","Módulo 1","1"],
+["Pele","Módulo 2","2"],
+["Postura","Módulo 3","3"],
+["Shape","Módulo 4","4"],
+["Dieta","Módulo 5","5"],
+["Cabelo","Módulo 6","6"],
+["Lábios","Módulo 7","7"],
+["Mentalidade","Bônus","8"],
+["Guia visual rápido","Bônus","9"],
+["Comunidade VIP","Bônus","10"]];
+const pst=(i)=>`<button class="pst" data-i="${i}"><img src="src/img/${MD[i][2]}.png" alt="${MD[i][0]}"><span class="pl">▶</span></button>`;
+$('#r1').innerHTML=MD.map((_,i)=>pst(i)).join('');
 const sl=$('#sl'),inp=sl.querySelector('input');let user=false;
 const setP=v=>{sl.style.setProperty('--p',v+'%');inp.value=v};
 inp.addEventListener('input',e=>{user=true;sl.style.setProperty('--p',e.target.value+'%')});
 new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();const t0=performance.now();
  (function a(t){if(user)return;const k=(t-t0)/2600;if(k>=1){setP(50);return}setP(Math.round(50+Math.sin(k*Math.PI*2)*38*(1-k*.4)));requestAnimationFrame(a)})(t0)},{threshold:.5}).observe(sl);
-
-// zoom
-const zm=$('#zm'),zi=zm.querySelector('img');
-$('#strip').onclick=e=>{const b=e.target.closest('button');if(!b)return;zi.src=b.querySelector('img').src;zm.classList.add('on')};
-zm.onclick=()=>zm.classList.remove('on');addEventListener('keydown',e=>{if(e.key==='Escape')zm.classList.remove('on')});
-
-// preço: 197 cai pra 35
 const pv=$('#pv');
-new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();
  const t0=performance.now()+900;(function a(t){const k=Math.min(Math.max((t-t0)/1800,0),1);pv.textContent=Math.round(197-162*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(a)})(performance.now())},{threshold:.6}).observe($('.pc'));
-
-// faq
 const F=[["Como vou acessar depois da compra?","Após a confirmação, os dados de acesso vão pro e-mail usado na compra. Use um e-mail que você realmente abre."],["Como o sistema funciona na prática?","Videoaulas + sequência clara de aplicação. Você não fica perdido no meio de conteúdo solto."],["Em quanto tempo vejo mudança?","Depende do ponto de partida e da constância. Algumas coisas aparecem rápido. O resto exige continuidade."],["Preciso já saber de estética?","Não. Foi feito pra quem está começando do zero."],["Vou gastar muito além do curso?","Não necessariamente. O foco é decidir melhor, não comprar aleatório. Você adapta ao seu orçamento."],["Vou ter contato direto?","Sim. Canal direto pra tirar dúvida e pedir ajuste."],["Inclui treino e dieta?","Sim. Junto com pele, rosto, postura, cabelo e mentalidade."],["Por quanto tempo tenho acesso?","Consulte as condições na página de pagamento."],["Posso assistir pelo celular?","Sim. Celular e computador."],["Não recebi o acesso. O que faço?","Verifique spam e promoções. Se não achar, use o suporte informado após a compra."]];
 const fq=$('#fq');
 fq.innerHTML=F.map(f=>`<div class="fi"><button>${f[0]}<span>+</span></button><div class="fa"><div><p>${f[1]}</p></div></div></div>`).join('');
